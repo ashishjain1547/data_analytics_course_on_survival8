@@ -1,0 +1,86 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<style>
+    i.blue {
+        color: blue;
+    }
+
+    i.green {
+        color: green;
+    }
+</style>
+<pre>
+import pandas as pd
+l = [5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215]
+s = pd.Series(l)
+s.nunique()
+
+<i class="green">
+12
+</i>
+
+bins = pd.qcut(s, 3) # Equal frequency binning
+
+<h1>How do we make data smooth using mean?</h1>
+
+df = pd.DataFrame(
+    {
+        'data': l,
+        'bins': bins
+    }
+)
+
+df
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoEZsknbWx3KNMHyoiZNypElDtNkzKvjPSoLkYSwx_UucKIDDfP1FouojTE0gy-SVTSn1WYkOI-eciwPs1WyZm_nkV7-FOgDwkKLyLZuaCmv9v7GBIif1WrbX6jKLF6GES-YX1voU5HhbI2AA45KQYHwOBmX3aSIYR0kBdu5sE0qrVPoJ4PLyy-Vzgc7I3/s502/1.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="502" data-original-width="236" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoEZsknbWx3KNMHyoiZNypElDtNkzKvjPSoLkYSwx_UucKIDDfP1FouojTE0gy-SVTSn1WYkOI-eciwPs1WyZm_nkV7-FOgDwkKLyLZuaCmv9v7GBIif1WrbX6jKLF6GES-YX1voU5HhbI2AA45KQYHwOBmX3aSIYR0kBdu5sE0qrVPoJ4PLyy-Vzgc7I3/s600/1.png"/></a></div>
+
+t = df.groupby(['bins']).mean(['data'])
+
+t
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv8dtwlbAudGa9QXQsF3EZRH4SUbAF0gF-2NScZWIhRMKGGL0aAAdhRiQ_2SnKIj183BdGn-WFf6xdhrFEMrErzlnaGa0yiSiNtaDhYYeyeGx8-wkCm1__k4giuxUMnOmwT7OyxMc1kwkh6xNfz_1ANJOpfH3oJblb6LY2X5_EFwjj4qqV5qaQjvqH0YLh/s227/2.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="197" data-original-width="227" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhv8dtwlbAudGa9QXQsF3EZRH4SUbAF0gF-2NScZWIhRMKGGL0aAAdhRiQ_2SnKIj183BdGn-WFf6xdhrFEMrErzlnaGa0yiSiNtaDhYYeyeGx8-wkCm1__k4giuxUMnOmwT7OyxMc1kwkh6xNfz_1ANJOpfH3oJblb6LY2X5_EFwjj4qqV5qaQjvqH0YLh/s600/2.png"/></a></div>
+
+map_of_mean_values = {}
+for i in t.iterrows():
+    
+    # type(i[0]): Interval
+    # type(i[1]): Series
+    
+    map_of_mean_values.update({str(i[0]): i[1][0]})
+
+map_of_mean_values
+
+<i class="green">{'(4.999, 14.333]': 9.75, '(14.333, 60.667]': 38.75, '(60.667, 215.0]': 145.75}</i>
+
+df['bins'] = df['bins'].astype(str)
+
+df['smoothed_values'] = df['bins'].apply(lambda x: map_of_mean_values[x])
+
+df
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6glFD43zvrwij0Ilh8yeRlyneODXbL6hc5qBQ-0NpCZ7Nv5x3r3FpJ6ZZm2Ou0mubDYddL309diin3SBCR5imKp46blWIz0foB3Z3whiFGXqDr5hJ96kw2cAHHMoVRe4lAUq-Z1soaNE4DMQrcvtKrhOYo-o9BB-jRlgqkNrgrWVLqP-Bx9l864smSn6f/s506/3.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="506" data-original-width="405" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6glFD43zvrwij0Ilh8yeRlyneODXbL6hc5qBQ-0NpCZ7Nv5x3r3FpJ6ZZm2Ou0mubDYddL309diin3SBCR5imKp46blWIz0foB3Z3whiFGXqDr5hJ96kw2cAHHMoVRe4lAUq-Z1soaNE4DMQrcvtKrhOYo-o9BB-jRlgqkNrgrWVLqP-Bx9l864smSn6f/s600/3.png"/></a></div>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGpsJyDhjJvwS1uSSyKTqAOFoJHI8fyRXJ4ivX-btfwEnSiw/viewform?embedded=true" width="520" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</pre>
