@@ -1,0 +1,162 @@
+<head>
+  <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Google AdSense Using Machine Learning Code -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3071098372371409",
+          enable_page_level_ads: true
+      });
+  </script>
+
+  <style>
+      pre {
+          white-space: pre-wrap;
+          white-space: -moz-pre-wrap;
+          white-space: -pre-wrap;
+          white-space: -o-pre-wrap;
+          word-wrap: break-word;
+      }
+  </style>
+</head>
+
+<body >
+<h1>Highlighting Algorithm Followed For Smoothing The Data</h1>
+<p>1. Decide which kind of binning you want to use?</p>
+<p>- Equal frequency</p>
+<p>- Equal width</p>
+<p>2. Once you have binned the data, you have to decide whether you are going to assign the bin with a value from:</p>
+<p>- mean</p>
+<p>- median</p>
+<p>- boundary</p>
+<p>3. Replace each bin value by the formula selected in Step 2.</p>
+<!-- <h1 ><b>Smoothing(noisy data)</b></h1> -->
+<!-- <h2>Suppose a group of 12 <i>sales price </i>records has been sorted as follows:</h2>
+<h2>5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</h2>
+<h2>Partition them into three bins by each of the following methods.</h2>
+<ul>
+<li>equal-frequency partitioning</li>
+</ul> -->
+<!-- <h1 ><b>Smoothing(noisy data)</b></h1>
+<h2>Suppose a group of 12 <i>sales price </i>records has been sorted as follows:</h2>
+<h2>5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</h2>
+<h2>Partition them into three bins by each of the following methods.</h2>
+<ul>
+<li>equal-frequency partitioning</li>
+</ul>
+<table>
+  <tr>
+    <td>
+<p>Bin 1</p>
+    </td>
+    <td>
+<p>5, 10, 11, 13</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>Bin 2</p>
+    </td>
+    <td>
+<p>15, 35, 50, 55</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>Bin 3</p>
+    </td>
+    <td>
+<p>72, 92, 204, 215</p>
+    </td>
+  </tr>
+</table>-->
+<h1 ><b>Smoothing(noisy data)</b></h1>
+<h2>Suppose a group of 12 <i>sales price </i>records has been sorted as follows:</h2>
+<h2>5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</h2>
+<h2>Partition them into three bins by each of the following methods.</h2>
+
+<h3>Equal-frequency partitioning</h3>
+
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEhEUsOlxiVs98G9nMMnH88CVagJkVHgC2QzJI0DsrWIiWXvhjgaPfR70Vr3i0JJfU_yZkBL6B8Fxyr4yvt5fSWspYC6hwgByMGypgoaGxx5H5g1OOvYa0wjcoyBoOwKRUaImr-6YJunoinx2LLr7PHppWYrSP0DSkKgOciS7B8vR1H_32AnMh5Q9yRGXTCD" alt="">
+<p>What is Smoothing by bin mean/median/boundary?</p>
+
+<h1 ></h1>
+<br><br>
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEgo-DrzJxGnoVUtDIBnDeDb3JNzfesUzVrVZCCl2rvHSrMLxSVznFiNcDbG7UfPAyV569yuRJ6a3fHy4DqoLNyqGY8VebnmuwYuKw5vdRjfKG1jfqNLodASVCz7-sfx6Ie4T1n8KLXxSqWJIJkqgkH2iIyt7ALHLSAex6aPjEpe3nhi1rtFA5JVKosQB_Tk" alt="">
+<br><hr><br>
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEhamWHKYbzySf8QrPiXeZULYomd7k4XnLzB_gHIVGel3WxYHT6-4jt3zjxlMaajZ1R2r55s_pB6cBd7gExihgmpdElHWSvCvgC9JslBO4e4A4gygdXnlG6hcy4jtcb24cQ57f6Ra2JlRC7ETCtYILrbP-gtsKEkGnkGwwIvmmkcxIfSeCjupGX9g30wmJzt" alt="">
+<br>
+<p>How do we define the first bin?</p>
+<p>We need a bin that encloses 5, 10 and 11.</p>
+<p>(4.5, 11.5]: This is also correct but let’s look at Pandas.</p>
+<p>What Pandas has created is:</p>
+<p>(4.999, 12.5]: Range exlusive of 4.999 and starting from there. Also range inclusive of 12.5 and ending there.</p>
+<p>Is it wrong? No.</p>
+<p>Next bin:</p>
+<p>(12.5, 42.5]: Is it wrapping the elements 13, 15 and 35?</p>
+<p>Next bin would start at 42.5. Can we say this?</p>
+
+<h1 ><b>Smoothing(noisy data)</b></h1>
+<h2>Suppose a group of 12 <i>sales price </i>records has been sorted as follows:</h2>
+<h2>5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</h2>
+<h2>Partition them into three bins by each of the following methods.</h2>
+
+<h3>Equal-frequency partitioning</h3>
+
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEhEUsOlxiVs98G9nMMnH88CVagJkVHgC2QzJI0DsrWIiWXvhjgaPfR70Vr3i0JJfU_yZkBL6B8Fxyr4yvt5fSWspYC6hwgByMGypgoaGxx5H5g1OOvYa0wjcoyBoOwKRUaImr-6YJunoinx2LLr7PHppWYrSP0DSkKgOciS7B8vR1H_32AnMh5Q9yRGXTCD" alt="">
+
+<p>What is Smoothing by bin mean/median/boundary?</p>
+<p>Replace each bin value is replaced by mean/median/nearest boundary</p>
+
+<h1 ></h1>
+<p>On smoothing by bin-boundary (bins follow equal-frequency partitioning):</p>
+<p>Bin 1: 5, 13, 13, 13 </p>
+<p>As 5 is closer to boundary value ‘5’. And, 10, 11 are closer to boundary value ‘13’</p>
+<p>Bin 2: 15, 15, 55, 55</p>
+<p>Bin 3: 72, 72, 215, 215</p>
+<p>Original:</p>
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEhEUsOlxiVs98G9nMMnH88CVagJkVHgC2QzJI0DsrWIiWXvhjgaPfR70Vr3i0JJfU_yZkBL6B8Fxyr4yvt5fSWspYC6hwgByMGypgoaGxx5H5g1OOvYa0wjcoyBoOwKRUaImr-6YJunoinx2LLr7PHppWYrSP0DSkKgOciS7B8vR1H_32AnMh5Q9yRGXTCD" alt="">
+
+<h1 ></h1>
+<p><b>Smoothing by equal-frequency binning using the mean of each bin</b></p>
+<pre>1. creation of bins 
+In code: <i>pd.qcut()</i><br>
+2. grouping the data according to bins 
+In code: <i>df.groupby()</i><br>
+3. find the mean of each group
+In code: <i>df.groupby().mean()</i><br>
+4. create a map of bin labels and mean values
+In code: it is essentially a dictionary that looks like this:
+{
+  '(4.999, 14.333]': 9.75, 
+  '(14.333, 60.667]': 38.75, 
+  '(60.667, 215.0]': 145.75
+}
+
+A dictionary is simply key-value pairs.
+5. Populate a new column containing the mean of each bin for each data point. </pre>
+
+<h1>Smoothing (noisy data)</h1>
+<h2>Suppose a group of 12 <i>sales price </i>records has been sorted as follows:</h2>
+<h2>5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</h2>
+<h2>Partition them into three bins by each of the following methods.</h2>
+
+<h3>Equal-width partitioning</h3>
+
+<h3>The width of each interval is (215 - 5)/3 = 70.</h3>
+
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEjVVbf-kib2M57Mn6Guc3CVI4TocgwJExF2pY5l5i9MPmiY73aqI6aDOmsnmXO1441u6M3MT1vYZEtNn0jzdnoSEiwJcYyUfqi9XkYPlfrU1wuRdwfCw0IR8KvnIQtyHnsZiaz1uZE2E9WYUUcXOPICvbtCazXvAbex5fY6YHNNukkww9h7YcREk9WOeKFm" alt="">
+<p>Perform Smoothing by bin mean/median/boundary.</p>
+
+<p>Bins using equal width partitioning.</p>
+<p>Elements: 5<i>, </i>10<i>, </i>11,<i> </i>13,<i> </i>15,<i> </i>35,<i> </i>50,<i> </i>55,<i> </i>72,<i> </i>92,<i> </i>204,<i> </i>215</p>
+<p>The width of each interval is (215 –<i> </i>5)/3 = 70.</p>
+<p>Domain for bin-1: 5 up to, but not, 75 (= 5 + 70) </p>
+<p>Domain for bin-2: 75 to 144</p>
+<p>Domain for bin-3: 145 Onwards (inc. 215 from the input data set) </p>
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEjVVbf-kib2M57Mn6Guc3CVI4TocgwJExF2pY5l5i9MPmiY73aqI6aDOmsnmXO1441u6M3MT1vYZEtNn0jzdnoSEiwJcYyUfqi9XkYPlfrU1wuRdwfCw0IR8KvnIQtyHnsZiaz1uZE2E9WYUUcXOPICvbtCazXvAbex5fY6YHNNukkww9h7YcREk9WOeKFm" alt="">
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGpsJyDhjJvwS1uSSyKTqAOFoJHI8fyRXJ4ivX-btfwEnSiw/viewform?embedded=true" width="580" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</body>
