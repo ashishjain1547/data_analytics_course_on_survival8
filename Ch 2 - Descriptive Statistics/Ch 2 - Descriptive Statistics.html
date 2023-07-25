@@ -5304,9 +5304,9 @@ Algebraic Measure
 Holistic Measure (expensive)
 - median
 
-Mode – value occurring most frequently
+Mode - value occurring most frequently
 
-Midrange – average of largest and smallest values
+Midrange - average of largest and smallest values
 
 <h2>Practice Problem</h2>
 
@@ -5320,7 +5320,7 @@ What is the midrange of the data?
 
 The data characteristics we discussed are called Central Tendencies.
 
-Another important characteristic is called Dispersion or variance of the data
+Another important characteristic is called <b>Dispersion</b> or <b>Variance</b> of the data
 - Range
 - Five-number summary (based on quartiles)
 - Interquartile range
@@ -5355,6 +5355,44 @@ Show a box plot.
 
 <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhE-RvosHvpfqWfAhrNKEhkdWfWq0zx322XUb0MUolLXG6l9LHsnHlLnoPBC2Tj1n455jrF7rZjBG9_vF40zq3jmN9mgXikpb48O1GSC_4q2vvlcBmJOdj7a6vRcjrueDFtL1LnB35fxtmpJH9D8mlnr0-OjLgnv-YT1qZM8Fk__krZs7aefs9LBVpDcw/s698/3.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="240" data-original-width="698" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhE-RvosHvpfqWfAhrNKEhkdWfWq0zx322XUb0MUolLXG6l9LHsnHlLnoPBC2Tj1n455jrF7rZjBG9_vF40zq3jmN9mgXikpb48O1GSC_4q2vvlcBmJOdj7a6vRcjrueDFtL1LnB35fxtmpJH9D8mlnr0-OjLgnv-YT1qZM8Fk__krZs7aefs9LBVpDcw/s600/3.png"/></a></div>
 
+<h2>Scatter Plot</h2>
+
+A plot useful in visualizing the data as points in 2D or 3D is called Scatter Plot.
+
+<h3>In 2D</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkL0fiQlt6e6gQtaFN4dbXkQpuzNH5YVIr_HPBd9LynRtDCsAnglv6Tedcu5OeHzW4Rg80nkCis-xMMI8mLxZufE7TXfbgxrWa9Nth92MsaMZtYbVbUslYK1FHALCPsiFvnUav-rl7KyN_2lf1Mdpe0dHYZAqCMXgWJw3Gwl6Cl7OSiq4aLiTr_XYf1Gha/s360/scatterplot_2d.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="240" data-original-width="360" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkL0fiQlt6e6gQtaFN4dbXkQpuzNH5YVIr_HPBd9LynRtDCsAnglv6Tedcu5OeHzW4Rg80nkCis-xMMI8mLxZufE7TXfbgxrWa9Nth92MsaMZtYbVbUslYK1FHALCPsiFvnUav-rl7KyN_2lf1Mdpe0dHYZAqCMXgWJw3Gwl6Cl7OSiq4aLiTr_XYf1Gha/s600/scatterplot_2d.png"/></a></div>
+
+<h3>In 3D</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdq8AZI_3Jkf5subosx-8-RUaXp_SHbLa3jbt2P-PA38GCMbOijOelPPYfX9ltpQrJASSo3CZU5qjV8toUxWM2ZfY4qCrpsvmIabPDI3-b6wJ4BCrMCOko-nMfWJT2w7Gi37LL8RIP7cVps1PiQJho39kVp2A-wbA8MGD17DJZtACS9OrJvL4vjbMKWR6u/s604/scatterplot_3d.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="604" data-original-width="566" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdq8AZI_3Jkf5subosx-8-RUaXp_SHbLa3jbt2P-PA38GCMbOijOelPPYfX9ltpQrJASSo3CZU5qjV8toUxWM2ZfY4qCrpsvmIabPDI3-b6wJ4BCrMCOko-nMfWJT2w7Gi37LL8RIP7cVps1PiQJho39kVp2A-wbA8MGD17DJZtACS9OrJvL4vjbMKWR6u/s600/scatterplot_3d.png"/></a></div>
+
+<b>Code</b>
+
+<i>
+# Import libraries
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+  
+  
+# Creating dataset
+z = np.random.randint(100, size =(50))
+x = np.random.randint(80, size =(50))
+y = np.random.randint(60, size =(50))
+  
+# Creating figure
+fig = plt.figure(figsize = (10, 7))
+ax = plt.axes(projection ="3d")
+  
+# Creating plot
+ax.scatter3D(x, y, z, color = "green")
+plt.title("Demo of 3D scatter plot")
+  
+# show plot
+plt.show()
+</i>
+
 <h2>Practice Problem</h2>
 
 Suppose a hospital tested the age and body fat data for 18 randomly selected adults with the following result. 
@@ -5362,8 +5400,6 @@ Suppose a hospital tested the age and body fat data for 18 randomly selected adu
 <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSSyVaaA9PdyUo9yzU4pFvVTib3ARDMYgCXe_Igzdv5L7z1sWIBG7FFv8EAABPlridOZviV9siyJfLQUMbUUJ2S7Pz1OmCU7lPFzjmZurHcTXC7Cb_O-Pb08He_V6UtKSuBkjOqREUZK7KlXbt5RnPIzXUnzMdnnpqt-ZNjtjnFDbHj_ezlmR8TppDuw/s582/4.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="109" data-original-width="582" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSSyVaaA9PdyUo9yzU4pFvVTib3ARDMYgCXe_Igzdv5L7z1sWIBG7FFv8EAABPlridOZviV9siyJfLQUMbUUJ2S7Pz1OmCU7lPFzjmZurHcTXC7Cb_O-Pb08He_V6UtKSuBkjOqREUZK7KlXbt5RnPIzXUnzMdnnpqt-ZNjtjnFDbHj_ezlmR8TppDuw/s600/4.png"/></a></div>
 
 Calculate the mean, median and standard deviation of age and %fat.
-
-
 
 <b>Answers</b>
 
