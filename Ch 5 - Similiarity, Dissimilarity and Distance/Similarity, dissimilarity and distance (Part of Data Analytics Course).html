@@ -1,0 +1,1070 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><b>Measuring Similarity/Dissimilarity</b></h1>
+
+    <p>Briefly outline how to compute the <i>dissimilarity </i>between objects described by the following types of
+        variables:</p>
+
+    <b>Numerical (interval-scaled) variables</b>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUIz-4_G8I2hy3w9As75dTLdrj1cKrK7tkYLhyphenhyphenOS6wSDdGL_QE3-75JeSuLHr3vubR12zhfqiHm5LjhtWs0rORrZOEjfdI4iDBv7OXuaGTAEDf4o3AcovZSc0NLldPBgkFheiYljOcZovA8FBWuL8A14Juqb-WeG87rSibLHRiaOLEUFzeBYf2UeSJUODj/s811/s3.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="391" data-original-width="811"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUIz-4_G8I2hy3w9As75dTLdrj1cKrK7tkYLhyphenhyphenOS6wSDdGL_QE3-75JeSuLHr3vubR12zhfqiHm5LjhtWs0rORrZOEjfdI4iDBv7OXuaGTAEDf4o3AcovZSc0NLldPBgkFheiYljOcZovA8FBWuL8A14Juqb-WeG87rSibLHRiaOLEUFzeBYf2UeSJUODj/s600/s3.png" /></a>
+    </div>
+
+    <h1 style="page-break-before:always; "></h1>
+    <p>A = (2, 4)</p>
+    <p>B = (1, 3)</p>
+    <p>Euclidean distance = math.sqrt(pow(2-1, 2) + pow(4-3, 2))</p>
+    <p>A = (2, 7, 5)</p>
+    <p>B = (4, 8, 9)</p>
+    <p>ed = math.sqrt(pow(2-4, 2) + pow(7-8, 2) + pow(5-9, 2))</p>
+    <p>Euclidean distance is the direct and straight line distance.</p>
+    <p>Whereas:</p>
+    <p>Manhattan distance is indirect and calculated along x and y axis.</p>
+    <h1 style="page-break-before:always; "></h1>
+    <p>Euclidean Distance</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsVofoQAnjtQk4s5kkVawAPTzvee2KSERq8tY1sPflD3lW9gBqgwaoolHx1Fbhv4bS6dEneM9m7f_Z-yNpIJWBCQoS6BeQIE3kYc1hhn7aYF0q2Iv0jKl6nXbTMgaoqoopf6d6qvLNUR7t7kRwVmjA2ktKaoBf6O5yIiQksoHKWVczza5jdxBlhjFgiCLl/s548/s5.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600"
+                data-original-height="548" data-original-width="347"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsVofoQAnjtQk4s5kkVawAPTzvee2KSERq8tY1sPflD3lW9gBqgwaoolHx1Fbhv4bS6dEneM9m7f_Z-yNpIJWBCQoS6BeQIE3kYc1hhn7aYF0q2Iv0jKl6nXbTMgaoqoopf6d6qvLNUR7t7kRwVmjA2ktKaoBf6O5yIiQksoHKWVczza5jdxBlhjFgiCLl/s600/s5.png" /></a>
+    </div>
+
+    <h1 style="page-break-before:always; "></h1>
+    <p>Manhattan Distance</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibRaRMSqPUBT_1qt2Bh0kFYHvhs_rpogKUXXtfI0gGRSzVpA0MhBjiVbO3w8PLSEdX5r_gbI71BG7INQN77z9LD9Cc_OyOHfuxzpLfvcCQcW7nsIPw4zMaF1AEpnUO7xrj1Zt-6smOjOh0m_3B2WreFsPkssz_EyeZQDBY36xcptS_wi3Pcb2oq1lIbXnY/s449/s6-1.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="224" data-original-width="449"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibRaRMSqPUBT_1qt2Bh0kFYHvhs_rpogKUXXtfI0gGRSzVpA0MhBjiVbO3w8PLSEdX5r_gbI71BG7INQN77z9LD9Cc_OyOHfuxzpLfvcCQcW7nsIPw4zMaF1AEpnUO7xrj1Zt-6smOjOh0m_3B2WreFsPkssz_EyeZQDBY36xcptS_wi3Pcb2oq1lIbXnY/s600/s6-1.png" /></a>
+    </div>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjqxN6m92AsTcEITfomQCTYbkptLPgZ5YDj48-5VtigvxhLbwEB8CnXcCDv6ae2SrWeQxk_SjbyqpxbJEPDXIh0wVlEk2VczjJzazbBOGA5ObBCklxtI0jHBWqDpHxi6DJwDkNd2MZG8inAzw-5Y59u-4J0HrdLySu9v0xPVd8NmKbChn3Smgz3PzokwP6/s525/s6-2.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600"
+                data-original-height="525" data-original-width="511"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjqxN6m92AsTcEITfomQCTYbkptLPgZ5YDj48-5VtigvxhLbwEB8CnXcCDv6ae2SrWeQxk_SjbyqpxbJEPDXIh0wVlEk2VczjJzazbBOGA5ObBCklxtI0jHBWqDpHxi6DJwDkNd2MZG8inAzw-5Y59u-4J0HrdLySu9v0xPVd8NmKbChn3Smgz3PzokwP6/s600/s6-2.png" /></a>
+    </div>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbLg1Bhlq48nYzUUOG7la4T1tud6HzXTrx7hs4-T6V_keUuSsKd-_wmny-nuaXfQKgYNzdGHVMEW82qnEMbLnWZ5VmMJXaFwW9kIUdgaQZdS5sMJTDj3c89cCS_eGj8CcSS9gNfPwdX2F1ebhp-F1DUHme_u6NQr1EyamZTdQqzWBLB9sf9bcC7WwcG6o_/s314/s7.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="218" data-original-width="314"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbLg1Bhlq48nYzUUOG7la4T1tud6HzXTrx7hs4-T6V_keUuSsKd-_wmny-nuaXfQKgYNzdGHVMEW82qnEMbLnWZ5VmMJXaFwW9kIUdgaQZdS5sMJTDj3c89cCS_eGj8CcSS9gNfPwdX2F1ebhp-F1DUHme_u6NQr1EyamZTdQqzWBLB9sf9bcC7WwcG6o_/s600/s7.png" /></a>
+    </div>
+    <h2>Manhattan Distance</h2>
+    <p>Manhattan Distance is inspired from a traveler going from one point to another in the city of Manhattan.</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5sVPkDFbYdBgjsImlQ7508HLEvxXM5vzNmvGp9ZSzRZo59JwhChGf3reB2p7O8uQ9ayOmOrb6J1aWl5aoOcP14ABnovt7n4YXU9FLBeyHOI7U1HmElo0m8C6P3yPBUxrdvPNGA3QEAQzhSpY6AfQWtreRA020YEKWlJtNWAvjTLtNHYPxHM3ogpDOhqQa/s479/s8-1.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="357" data-original-width="479"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5sVPkDFbYdBgjsImlQ7508HLEvxXM5vzNmvGp9ZSzRZo59JwhChGf3reB2p7O8uQ9ayOmOrb6J1aWl5aoOcP14ABnovt7n4YXU9FLBeyHOI7U1HmElo0m8C6P3yPBUxrdvPNGA3QEAQzhSpY6AfQWtreRA020YEKWlJtNWAvjTLtNHYPxHM3ogpDOhqQa/s600/s8-1.png" /></a>
+    </div>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5uxhai5cjCCMRMKiybh5uHhc-FZ6eT2w57jHPEJSYDi2UV77V6rIGbQ-KxSfeLi6bwmAN7BoNpUNwGB2VjC3F8Gzq8RZdTkFjFvGeo2RDg7uTn2xjXJgqelLTsdKvkx4zIS-63Iuxdmvh2DIsmXHyRWufA-I0IeS2eyntZW86sM-e9HsriaI2WvG3sDT6/s534/s8-2.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="413" data-original-width="534"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5uxhai5cjCCMRMKiybh5uHhc-FZ6eT2w57jHPEJSYDi2UV77V6rIGbQ-KxSfeLi6bwmAN7BoNpUNwGB2VjC3F8Gzq8RZdTkFjFvGeo2RDg7uTn2xjXJgqelLTsdKvkx4zIS-63Iuxdmvh2DIsmXHyRWufA-I0IeS2eyntZW86sM-e9HsriaI2WvG3sDT6/s600/s8-2.png" /></a>
+    </div>
+
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTV-9WYe0m74Eqv9ojzk9SiEy1xIj26FptrNVxSj7b4Bha2ETAXG7NNuwNd7xpoRx2YB7QmqRGjljWA9uLTxz9sAyw-uTDGZLfUAALi6uN7KReg8CpPVgqKf8o6nokHL6x8k32rTfga2Gg8ZB1PhPnJ2FZICW9tF2jCmwJRQHWHLXbaf1m3Vaccik3U156/s684/s9.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="347" data-original-width="684"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTV-9WYe0m74Eqv9ojzk9SiEy1xIj26FptrNVxSj7b4Bha2ETAXG7NNuwNd7xpoRx2YB7QmqRGjljWA9uLTxz9sAyw-uTDGZLfUAALi6uN7KReg8CpPVgqKf8o6nokHL6x8k32rTfga2Gg8ZB1PhPnJ2FZICW9tF2jCmwJRQHWHLXbaf1m3Vaccik3U156/s600/s9.png" /></a>
+    </div>
+
+    <p>Euclidean distance: Straight line distance between two points.</p>
+    <p>Manhattan distance: is cityblock distance that is you would go from place to place in car.</p>
+    <h1 style="page-break-before:always; "><b>Minkowski Distance</b></h1>
+
+    <p>Given two objects represented by the tuples (22, 1, 42, 10) and (20, 0, 36, 8):</p>
+    <p>Compute the <i><b>Minkowski</b> distance </i>between the two objects, using <i>p </i>= 3.</p>
+    <p>In plain English: kth root of sum of kth powers of absolute value of differences.</p>
+    <p>For manhattan distance, p = 1 in Minkowski dist.</p>
+    <p>For euclidean distance, p = 2 in Minkowski dist.</p>
+    <p>Manhattan and Euclidean distances are special cases of Minkowski.</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJXYIPlZR3ovKDV5PAuP_-4VhDG14xGtJCbAFCuciUoVQ3MyQVewO_X526mVRyFuwu92pdnlneInv8jXWIVyac85V8P785CwlQqQ0PRbKW98d2x9z_fD1kpqBpkHuIrzk716t0BVKPO_vaBWu1R62AeN3NLu5Tw5YqXpsUSiehV2L1sTcZP14_3lxfUKJg/s305/s10.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="291" data-original-width="305"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJXYIPlZR3ovKDV5PAuP_-4VhDG14xGtJCbAFCuciUoVQ3MyQVewO_X526mVRyFuwu92pdnlneInv8jXWIVyac85V8P785CwlQqQ0PRbKW98d2x9z_fD1kpqBpkHuIrzk716t0BVKPO_vaBWu1R62AeN3NLu5Tw5YqXpsUSiehV2L1sTcZP14_3lxfUKJg/s600/s10.png" /></a>
+    </div>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Similarity/Dissimilarity
+        </b></font>
+    </h1>
+    <h2>Briefly outline how to compute the <i>dissimilarity </i>between objects described by:</h2>
+
+    <ul>
+        <li>Asymmetric binary variables</li>
+    </ul>
+    <p>If all binary attributes have the same weight then they are symmetric. Let’s say we have the contingency
+        table:</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRsBKpeS1m9kHZkSwVGcDDAq_CsCZaoFnYe6fbR7cMsL74ENFfGuOtOEhNYlGmh6dl_ucPGUWPk9GFEslLuj-8ZGfaNLyAsPIx58oRm8aIKAIz8S0G5UahdsC_pFLqetJF2pxNP6smMDqxqhy_N6ukpEVDD0GS2w278HtdGma2G-q5U2q2MeFdKJUbCA20/s348/s11.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="122" data-original-width="348"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRsBKpeS1m9kHZkSwVGcDDAq_CsCZaoFnYe6fbR7cMsL74ENFfGuOtOEhNYlGmh6dl_ucPGUWPk9GFEslLuj-8ZGfaNLyAsPIx58oRm8aIKAIz8S0G5UahdsC_pFLqetJF2pxNP6smMDqxqhy_N6ukpEVDD0GS2w278HtdGma2G-q5U2q2MeFdKJUbCA20/s600/s11.png" /></a>
+    </div>
+    <p>If the binary attributes are asymmetric, Jaccard coefficient is often used:</p>
+    <p>For cell (i=1, j=1) representing #(object I = 1 and object J = 1):</p>
+    <p><i>J </i>= q / (q + r + s) </p>
+    <p><b>J = # elements in intersection / # elements in the union</b></p>
+    <p>Jaccard similarity (aka coefficient or score) ranges from 0 to 1.</p>
+    <p>Jaccard dissimilarity (aka distance) = 1 – Jaccard Similarity</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDx9hwdegF8Xgf8jPuqgDnvS9A1imxmGdirfXIzRZmlo7CQcMXa51-15iDtOt_38foQK7Q1MFr2B1S-qbxuhnXTUyp91PypiQ1kmDDrVo446JcuuK0Ml4ijTKbOnBg36qfv_so2qp6kvtuUh_d2y_Lt94Q3A0WKPds7R78vfI-exgoe37fdizd1VITYuI7/s437/s12-1.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="210" data-original-width="437"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDx9hwdegF8Xgf8jPuqgDnvS9A1imxmGdirfXIzRZmlo7CQcMXa51-15iDtOt_38foQK7Q1MFr2B1S-qbxuhnXTUyp91PypiQ1kmDDrVo446JcuuK0Ml4ijTKbOnBg36qfv_so2qp6kvtuUh_d2y_Lt94Q3A0WKPds7R78vfI-exgoe37fdizd1VITYuI7/s600/s12-1.png" /></a>
+    </div>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVdaNGgXwSMmemAWzS_ShgT21130OyY8-f2rnWjb5iObarGsqJJg7MTnQ-M8wxXiC7ZlwaGLVJTLkGUjCOjic4oOiaET_tkZCyo5WJNXwlMjlsFylGG3OvDgQH6a3Bm2XlWSsH-p8Q5eota2Tv3rd5sBTTjaPulpcIhb7NOTEGkE8wHN5KRjUH0nM09Pj8/s251/s12-2.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600"
+                data-original-height="251" data-original-width="198"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVdaNGgXwSMmemAWzS_ShgT21130OyY8-f2rnWjb5iObarGsqJJg7MTnQ-M8wxXiC7ZlwaGLVJTLkGUjCOjic4oOiaET_tkZCyo5WJNXwlMjlsFylGG3OvDgQH6a3Bm2XlWSsH-p8Q5eota2Tv3rd5sBTTjaPulpcIhb7NOTEGkE8wHN5KRjUH0nM09Pj8/s600/s12-2.png" /></a>
+    </div>
+    <p>The reason why ‘t’ is not considered in Jaccard coeff. Is because, while taking an example of shopping cart, it
+        would not make same sense to count the number of times that were missing from both the cart I and J. If we count
+        the number of items that were missing in both carts, it would increase the similarity.</p>
+    <p>If it is given the attributes are binary and assymmetric, t is not counted. If it is symmetric, then formula for
+        J may include ‘t’ in the numerator and denominator:</p>
+    <p>J = (q + t) / (q + r + s + t)</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJMzndjraoRysuCA8p2MaVsJaESEWjsk_8iBWLMh1iTF1AjV80HzLBiYVhIGQhVxUgY-aEs3N6rkyXG9rVPTXgkX7vYUle_0xxQerRpkYfQV38Wjz68MeR6G42RT1KQO75iSEwFolid9_y3PjAkrktz7btINHZ8OdZGB_Oovzg5P-ZU-Ct0mVGIw3oFn77/s784/s14.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600"
+                data-original-height="784" data-original-width="682"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJMzndjraoRysuCA8p2MaVsJaESEWjsk_8iBWLMh1iTF1AjV80HzLBiYVhIGQhVxUgY-aEs3N6rkyXG9rVPTXgkX7vYUle_0xxQerRpkYfQV38Wjz68MeR6G42RT1KQO75iSEwFolid9_y3PjAkrktz7btINHZ8OdZGB_Oovzg5P-ZU-Ct0mVGIw3oFn77/s600/s14.png" /></a>
+    </div>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip1aQ4gGeO7Sx5CMuWD_pzLH_bz7YjtxCFRyY0b0Ylv_hs_w6Te777spjEr_AHy17mRbQgrEGxVl5s_4c-Oe23OFnuaRTDXcZPzROCyt_yWqBh27l3cnoAmD9lgdIkEVbL66J3nhQB-qjlAM3HDoVGLqHDviPz_iLQ5JK5i9XMImsEFr_Ht5LJm2FH5yR3/s735/s15.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="169" data-original-width="735"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip1aQ4gGeO7Sx5CMuWD_pzLH_bz7YjtxCFRyY0b0Ylv_hs_w6Te777spjEr_AHy17mRbQgrEGxVl5s_4c-Oe23OFnuaRTDXcZPzROCyt_yWqBh27l3cnoAmD9lgdIkEVbL66J3nhQB-qjlAM3HDoVGLqHDviPz_iLQ5JK5i9XMImsEFr_Ht5LJm2FH5yR3/s600/s15.png" /></a>
+    </div>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLv8iY2blvlNgJmxMri72tg77dpYx0UQt1ny9Z7BDBYmWxPUfY74g-vsgN1o2wya4rkgZ5C3g1_NQr9JMrk9b-f_RyQZ6HJ2_eylJezcbh-b17k3dQk6D9g8o3rJ0RbPt810ZbR34NXYaXly12NUIetV509vz769bXgIR9IB58LMTyxDzT5WOaRjlmotwZ/s743/s16.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="671" data-original-width="743"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLv8iY2blvlNgJmxMri72tg77dpYx0UQt1ny9Z7BDBYmWxPUfY74g-vsgN1o2wya4rkgZ5C3g1_NQr9JMrk9b-f_RyQZ6HJ2_eylJezcbh-b17k3dQk6D9g8o3rJ0RbPt810ZbR34NXYaXly12NUIetV509vz769bXgIR9IB58LMTyxDz   T5WOaRjlmotwZ/s600/s16.png" /></a>
+    </div>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdQunzPR2r-QifglmghhYa2TyuLyWeqkzyWvU4vaJe-13P17vX31CF6n9lqHWOMnpy9VKTGw3yKGOE0_6Rfl7QDbObyCTAbdIGZKpc_8UllJNDLMoAanVvfVdDUAWpVWnjOUe0PHFiXeJZ-lAm5yDZ5zAFqpyxzwYzLbAnT3wmbqI_p5fnD6I80JA9kLhQ/s669/s17.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="426" data-original-width="669"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdQunzPR2r-QifglmghhYa2TyuLyWeqkzyWvU4vaJe-13P17vX31CF6n9lqHWOMnpy9VKTGw3yKGOE0_6Rfl7QDbObyCTAbdIGZKpc_8UllJNDLMoAanVvfVdDUAWpVWnjOUe0PHFiXeJZ-lAm5yDZ5zAFqpyxzwYzLbAnT3wmbqI_p5fnD6I80JA9kLhQ/s600/s17.png" /></a>
+    </div>
+    <h1 style="page-break-before:always; "></h1>
+    <h1 style="page-break-before:always; "></h1>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Similarity/Dissimilarity
+        </b></font>
+    </h1>
+    <p>Briefly outline how to compute the <i>dissimilarity </i>between objects described by the following types of
+        variables:</p>
+    <ul>
+        <li>Categorical variables</li>
+    </ul>
+    <p>A categorical variable is a generalization of the binary variable in that it can take on more than two
+        states.</p>
+    <p>The dissimilarity between two objects <i>i </i>and <i>j </i>can be computed as:</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS7_LkMbNsFA10pwtPTz0vlUgV0xMKtrh2UF_8kBhQ9dGP_TSzTJQLySnjLNRgc4WAVcm59nIvjyR2wgyIGvTthYc6O_CfNV9-FTeG1LPzMvXRp_cQ5UsAMsP55CqAZoUN0gxuMXNVH7Li3bPu86WJ_0mFhrW55_uDsdzUShooC_Lpy6paFkBtEwaidhwI/s160/s18.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="48" data-original-width="160"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS7_LkMbNsFA10pwtPTz0vlUgV0xMKtrh2UF_8kBhQ9dGP_TSzTJQLySnjLNRgc4WAVcm59nIvjyR2wgyIGvTthYc6O_CfNV9-FTeG1LPzMvXRp_cQ5UsAMsP55CqAZoUN0gxuMXNVH7Li3bPu86WJ_0mFhrW55_uDsdzUShooC_Lpy6paFkBtEwaidhwI/s600/s18.png" /></a>
+    </div>
+    <p>where <i>m </i>is the number of <i>matches </i>(i.e., the number of variables for which <i>i </i>and <i>j
+        </i>are in the same state), and <i>p </i>is the total number of variables.</p>
+
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Similarity/Dissimilarity
+        </b></font>
+    </h1>
+    <p>Between text type of data:</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX50WCk4h9pn-7Wl6KYiWRUHpJ4UpXje1IBLucINTLEKQl9LsJGzl7q8WNU4uvas-WCcBlVRBg3eNFAzRV9AvsZO7qKsTyTcnbZde5hAZdK0BCp25EIvCIOnZDrNtRzs-zOGPrDXue0P9dpSugXMvzRJDTeCqkYPzPPWhPLqYD_jAyopQskRcfVdD2m2pc/s193/s19.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="56" data-original-width="193"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX50WCk4h9pn-7Wl6KYiWRUHpJ4UpXje1IBLucINTLEKQl9LsJGzl7q8WNU4uvas-WCcBlVRBg3eNFAzRV9AvsZO7qKsTyTcnbZde5hAZdK0BCp25EIvCIOnZDrNtRzs-zOGPrDXue0P9dpSugXMvzRJDTeCqkYPzPPWhPLqYD_jAyopQskRcfVdD2m2pc/s600/s19.png" /></a>
+    </div>
+    <p>This is equal to dot-product of the corresponding features divided by the magnitude. Geometrically, it is equal
+        to the cosine of angle between two lines.</p>
+    <h1 style="page-break-before:always; "></h1>
+    <table>
+        <tr>
+            <td>
+                <p>V</p>
+            </td>
+            <td>
+                <p>D1</p>
+            </td>
+            <td>
+                <p>D2</p>
+            </td>
+            <td>
+                <p>D3</p>
+            </td>
+            <td>
+                <p>D4</p>
+            </td>
+            <td>
+                <p>D5</p>
+            </td>
+            <td>
+                <p>D6</p>
+            </td>
+            <td>
+                <p>D7</p>
+            </td>
+            <td>
+                <p>D8</p>
+            </td>
+            <td>
+                <p>D9</p>
+            </td>
+            <td>
+                <p>D10</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>A</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>C</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>D</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>E</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+    </table>
+    <p>Cosine similarity is commonly seen in text data.</p>
+    <p>Which two out of these vectors are closest?</p>
+    <p>And, which two out of these vectors are farthest?</p>
+    <h1 style="page-break-before:always; "></h1>
+    <table>
+        <tr>
+            <td>
+                <p>A</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>A.B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+    </table>
+    <p>There are two ones so sum() </p>
+    <p>= 1 + 0 + 0 + 0 + 1 + 0 + 0 + 0 + 0 + 0</p>
+    <p>= 2</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjY1m0oLRe6aXr0_yrUbftg6kZzO7XfIKWGYnWaquDQsREKaswKhSd4HR2eFNTv8vHEpsfLMLzKHIeGtiKzeGsZTn2j7NRdvp2Shz4Tg04L-5CV1xHXqUY6Ho2QLd4NvtcmxpuTRrce7CoglsOyvyvAS91rtcd0mhl7U6wz1CDupZG_FmCTOmCXUDnZBY04/s426/s21.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="206" data-original-width="426"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjY1m0oLRe6aXr0_yrUbftg6kZzO7XfIKWGYnWaquDQsREKaswKhSd4HR2eFNTv8vHEpsfLMLzKHIeGtiKzeGsZTn2j7NRdvp2Shz4Tg04L-5CV1xHXqUY6Ho2QLd4NvtcmxpuTRrce7CoglsOyvyvAS91rtcd0mhl7U6wz1CDupZG_FmCTOmCXUDnZBY04/s600/s21.png" /></a>
+    </div>
+
+    <h1 style="page-break-before:always; "></h1>
+    <table>
+        <tr>
+            <td>
+                <p>A</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+    </table>
+    <p>|A| = math.sqrt(1**2 + 1**2 + 0 + 1**2 + 1**2 + 0 + 0 + 1**2 + 1**2 + 0)</p>
+    <p>= 2.449489742783178</p>
+    <p>|B| = math.sqrt(1**2 + 0 + 1 + 0 + 1 + 1 + 1 + 0 + 0 + 0)</p>
+    <p>= 2.23606797749979</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5dfRyPQGGG57KA2j-sMepxbsJt-YO1bmcklBU5EEZogg1M5pK_0OLDCx8cx4dRLwm7I4VExsjUQCWIDfajUsJeFxZUH6WclL6yni8UEXotoIEnKr10mXDgiE11dHXcuZBRGx5cS3IhopogddEUE2WSc_OoGVc2NBqyLJ53mIs5whb9UK1SLU0sEOwvXVD/s696/s23.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="490" data-original-width="696"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5dfRyPQGGG57KA2j-sMepxbsJt-YO1bmcklBU5EEZogg1M5pK_0OLDCx8cx4dRLwm7I4VExsjUQCWIDfajUsJeFxZUH6WclL6yni8UEXotoIEnKr10mXDgiE11dHXcuZBRGx5cS3IhopogddEUE2WSc_OoGVc2NBqyLJ53mIs5whb9UK1SLU0sEOwvXVD/s600/s23.png" /></a>
+    </div>
+
+    <h1 style="page-break-before:always; "></h1>
+    <p>Cos similarity (A, B) --&gt; cos(theta) = A.B / |A|.|B|</p>
+    <p>Cosine similarity = 2 / ( 2.449 * 2.236 ) </p>
+    <p>= 0.3652324960500105</p>
+
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhODHGy2kXd1a-skC_-IqxroQyLBG6gIImRTNgw8XNpKqnLVls_LIlKMhKFZucpTAQnWJvqECmBu0vs-Sg3C3Lx_tf1RSR8IXi9DUCedzUT0qart09C6-UQztnTYd4qad60MVQ5YB0MNEGFgD8j7RZmdXeT7taDiC3ZMwtoCE1RlkxdEhpw2vMSSjLoLt3l/s649/s24.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="384" data-original-width="649"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhODHGy2kXd1a-skC_-IqxroQyLBG6gIImRTNgw8XNpKqnLVls_LIlKMhKFZucpTAQnWJvqECmBu0vs-Sg3C3Lx_tf1RSR8IXi9DUCedzUT0qart09C6-UQztnTYd4qad60MVQ5YB0MNEGFgD8j7RZmdXeT7taDiC3ZMwtoCE1RlkxdEhpw2vMSSjLoLt3l/s600/s24.png" /></a>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <p>A</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>A.B</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+        </tr>
+    </table>
+    <h1 style="page-break-before:always; "></h1>
+    <p>Cosine Similarity</p>
+    <p>A = (4, 4)</p>
+    <p>B = (4, 0)</p>
+
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilXnLHbUtdHmO505nvXt3Q7KBVBqLF6SuutheY-R21aXI83ZhluI9lB0couOfdxwrMRIOGoNcJZvR7_JY1B-2tHS7cn54DpOtEOKVPtuBkZVJcWU9obgrn9dfbI7H8ixJ7mJVd7LOpK-0qa0PWhZRwDKqF7Mrm7l-6Ed5x0sHKOTzZPvgr9h3wVo9fSpnu/s415/s25.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="378" data-original-width="415"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilXnLHbUtdHmO505nvXt3Q7KBVBqLF6SuutheY-R21aXI83ZhluI9lB0couOfdxwrMRIOGoNcJZvR7_JY1B-2tHS7cn54DpOtEOKVPtuBkZVJcWU9obgrn9dfbI7H8ixJ7mJVd7LOpK-0qa0PWhZRwDKqF7Mrm7l-6Ed5x0sHKOTzZPvgr9h3wVo9fSpnu/s600/s25.png" /></a>
+    </div>
+
+    <p>Cosine similarity between A and B is: cos(theta)</p>
+    <p>Note: It is very easy to visualize it in 2D.</p>
+    <p>Formula wise: Cosine similarity = A.B / |A| * |B|</p>
+    <p>This formula has come after rearranging the dot product formula:</p>
+    <p>A.B = |A| * |B| * cos(theta)</p>
+    <p>(0,0)</p>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Cosine Similarity
+        </b></font>
+    </h1>
+    <p>Find cosine similarity between the following two sentences:</p>
+    <p>IIT Delhi course on data analytics IIT</p>
+    <p>IIT Delhi course on data analytics</p>
+    <p>Term: tf for d1, tf for d2</p>
+    <p>d1.d2 = 2.1 + 1.1 + 1.1 + 1.1 + 1.1 + 1.1 = 7</p>
+    <p>|d1| = sqrt(2^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2) = sqrt(9)</p>
+    <p>|d2| = sqrt(1^2 + 1^2 + 1^2 + 1^2 + 1^2 + 1^2) = sqrt(6)</p>
+    <p>Cosine similarity = d1.d2 / |d1| * |d2| = 7 / sqrt(9*6) = 0.93</p>
+    <table>
+        <tr>
+            <td>
+                <p>IIT</p>
+            </td>
+            <td>
+                <p>2</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Delhi</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Course</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>On</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Data</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Analytics</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+    </table>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Cosine Similarity
+        </b></font>
+    </h1>
+    <h2>Sent 1: I bought a new car today.</h2>
+    <h2>Sent 2: I already have a new car.</h2>
+    <h2>Step 1: Create vectors.</h2>
+    <table>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <p>Vector 1</p>
+            </td>
+            <td>
+                <p>Vector 2</p>
+            </td>
+            <td>
+                <p>Product of components</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>I</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>bought</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <ul>
+                    <li>0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>a</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <ul>
+                    <li>1</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>new</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <ul>
+                    <li>1</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>car</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <ul>
+                    <li>1</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>today</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <ul>
+                    <li>0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>already</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <ul>
+                    <li>0</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>have</p>
+            </td>
+            <td>
+                <p>0</p>
+            </td>
+            <td>
+                <p>1</p>
+            </td>
+            <td>
+                <ul>
+                    <li>0</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Cosine Similarity
+        </b></font>
+    </h1>
+    <h2>V1 = 1,1,1,1,1,1,0,0</h2>
+    <h2>V2 = 1,0,1,1,1,0,1,1</h2>
+    <h2>v1.v2 = 1 + 0 + 1 + 1 + 1 + 0 + 0 + 0 = 4</h2>
+    <h2>|v1| = math.sqrt(1**2 + 1**2 + 1**2 + 1**2 + 1**2 + 1**2 + 0 + 0) = 2.45</h2>
+    <h2>|v2| = math.sqrt(1**2 + 0 + 1**2 + 1**2 + 1**2 + 0 + 1**2 + 1**2) = 2.45</h2>
+    <h2>Cosine sim = 4 / (2.45 * 2.45)</h2>
+    <h2>= 0.66</h2>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Cosine Similarity
+        </b></font>
+    </h1>
+    <h2>Cosine Similarity: It is a bag-of-words based model i.e., order of words does not matter.</h2>
+    <h2>Sent1: I bought a new car today.</h2>
+    <h2>Sent2: I haven’t bought a new car today.</h2>
+    <div class="separator" style="clear: both;"><a
+            href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqWlYN11vmgnhRZ74OgWS7nz1tnupxBpMldaQ_ERnHuSGJmPZ8wb9hgYFLdx1OXzjj85dINa0wqZw2B7db6WCQ5cghyqQnW_co7fkvAB_rMRpeh0Gfs1cE97Yvk85ug7g7V6aPjWOwGtwQbrgF59yNCfp4Xl0rOUUNQUueKXe6i4OcXoShtFIvVXnniDtU/s193/s27.png"
+            style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600"
+                data-original-height="56" data-original-width="193"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqWlYN11vmgnhRZ74OgWS7nz1tnupxBpMldaQ_ERnHuSGJmPZ8wb9hgYFLdx1OXzjj85dINa0wqZw2B7db6WCQ5cghyqQnW_co7fkvAB_rMRpeh0Gfs1cE97Yvk85ug7g7V6aPjWOwGtwQbrgF59yNCfp4Xl0rOUUNQUueKXe6i4OcXoShtFIvVXnniDtU/s600/s27.png" /></a>
+    </div>
+    <h2>Step 1: Creating vectors</h2>
+    <h2>Cosine similarity is based on whether same words have been used in two sentences.</h2>
+    <h2>“How similar are two sentences in terms of the words (irrespective of their meaning) used in them?”</h2>
+    <h1 style="page-break-before:always; "><b>
+            <font color="#002060">Cosine Similarity
+        </b></font>
+    </h1>
+    <h2>Find cosine similarity between the following two sentences:</h2>
+    <h2>Brand new course on data analytics</h2>
+    <h2>Test-1 is scheduled later this month</h2>
+    <h2>Cosine similarity = 0.0</h2>
+    <h1 style="page-break-before:always; "></h1>
+    <p><b>In Code Following Steps Would Be Followed To Find The Cosine Similarity Between Two Sentences</b></p>
+    <p><b></b></p>
+    <p>1. Load the libraries like Scikit Learn.</p>
+    <p>Projects might include other libraries like Pandas, NumPy, NLTK (Natural Language Toolkit).</p>
+    <p>2. Load the data (i.e. your two sentences)</p>
+    <p>3. Convert them into vector form using CountVectorizer.</p>
+    <p>Note: there are some other ways also to convert a sentence into vector, but we want to keep it simple for first
+        class.</p>
+    <p>4. Next, you can use this method: sklearn.metrics.pairwise.cosine_similarity() to find the cosine similarity.
+    </p>
+    <p>Note: These are high level steps. You can find a lot of similarity/dissimilarity measures following these steps
+        after some minor modifications like changing Scikit Learn with SciPy, etc.</p>
+    <h1 style="page-break-before:always; "></h1>
+    <p><b>
+            <font color="#002060">Thank You!
+        </b></font>
+    </p>
+</body>
+<span style="display: none;">Tags: Technology,Data Analytics,</span>
